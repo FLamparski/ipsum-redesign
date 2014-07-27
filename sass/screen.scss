@@ -6,6 +6,7 @@
 @import "compass/reset";
 @import "colours.scss";
 @import "typography.scss";
+@import "_mixins.scss";
 @import "font-awesome/font-awesome.scss";
 
 $grid-gutter-width: 0px;
@@ -55,10 +56,16 @@ $dropdown-header-color: $gray-darker;
   .main-content {
     @include make-row();
     padding-top: 70px;
-    div {
-      padding: 15px;
-    }
+    padding-left: 10px;
   }
+}
+
+.card {
+  @include make-card($gray-lighter, $blue_grey_900, rgba(0, 0, 0, 0.26));
+}
+
+.card-portal-live {
+  @include make-card($portal_live_bg, $portal_live_text, rgba(0, 0, 0, 0.26));
 }
 
 .dropdown-header {
@@ -66,4 +73,59 @@ $dropdown-header-color: $gray-darker;
   font-weight: 900;
   font-size: 14px;
   text-transform: uppercase;
+}
+
+.portal-live {
+  > td {
+    background-color: $portal_live_bg;
+    color: $portal_live_text;
+  }
+  &:hover > td {
+    background-color: darken($portal_live_bg, 10%) !important;
+  }
+
+  &.active > td {
+    background-color: $portal_live_text !important;
+    color: $blue_grey_50;
+  }
+}
+
+.portal-rejected {
+  > td {
+    background-color: $portal_rejected_bg;
+    color: $portal_rejected_text;
+  }
+  &:hover > td {
+    background-color: darken($portal_rejected_bg, 10%) !important;
+  }
+
+  &.active > td {
+    background-color: $portal_rejected_text !important;
+    color: $blue_grey_50;
+  }
+}
+
+.portal-duplicate {
+  > td {
+    background-color: $portal_duplicate_bg;
+    color: $portal_duplicate_text;
+  }
+  &:hover > td {
+    background-color: darken($portal_duplicate_bg, 10%) !important;
+  }
+}
+
+.portal-submitted {
+  > td {
+    background-color: $portal_submitted_bg;
+    color: $portal_submitted_text;
+  }
+  &:hover > td {
+    background-color: darken($portal_submitted_bg, 10%) !important;
+  }
+}
+
+.portal-details-text {
+  @include make-row();
+  margin-top: 10px;
 }

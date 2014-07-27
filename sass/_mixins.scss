@@ -1,0 +1,12 @@
+@mixin make-card($bg, $fg, $shadow){
+  background-color: $bg;
+  color: $fg;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px $shadow;
+  padding: 1.5rem;
+  margin: 5px;
+  .card-no-margin {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+}
