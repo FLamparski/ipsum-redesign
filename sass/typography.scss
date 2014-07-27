@@ -1,0 +1,18 @@
+@import "compass/css3/font-face";
+
+// MD here stands for Material Design. Officially, Google just calls this font
+// "Roboto", but it should be distinguished from the older Roboto that's available
+// through the WebFonts.
+@include font-face('Roboto Condensed MD', font-files('../../fonts/RobotoCondensed-Bold.ttf'));
+
+@include font-face('Roboto Light MD', font-files('../../fonts/Roboto-Light.ttf'));
+@include font-face('Roboto Regular MD', font-files('../../fonts/Roboto-Regular.ttf'));
+
+// Bootstrap variables
+$font-family-sans-serif: 'Roboto Regular MD', Roboto, /* fallback if installed */
+                         'Helvetica Neue', 'Ubuntu', sans-serif;
+
+$headings-font-family: 'Roboto Light MD';
+$headings-font-weight: 100;
+
+$font-size-base: 16px;
