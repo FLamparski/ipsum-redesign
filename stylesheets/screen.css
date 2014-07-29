@@ -10514,40 +10514,139 @@ button.close {
 }
 
 /* line 38, ../sass/screen.scss */
-.main {
-  position: relative;
-  min-height: 1px;
-  padding-left: 0px;
-  padding-right: 0px;
-  margin-left: 16.66666666667%;
-}
-@media (min-width: 1200px) {
-  /* line 38, ../sass/screen.scss */
-  .main {
-    float: left;
-    width: 83.3333333333%;
-  }
-}
-/* line 42, ../sass/screen.scss */
-.main .navbar {
+.app-bar {
   position: fixed;
-  right: 1px;
   top: 0px;
-  width: 83.333333333333%;
+  width: 100%;
+  background-color: #263238;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.26);
   z-index: 100;
 }
-/* line 50, ../sass/screen.scss */
-.main .navbar .dropdown-toggle {
+@media (min-width: 1200px) {
+  /* line 48, ../sass/screen.scss */
+  .app-bar div.header > a > i {
+    vertical-align: 10% !important;
+  }
+}
+@media (min-width: 0px) and (max-width: 1199px) {
+  /* line 46, ../sass/screen.scss */
+  .app-bar div.header {
+    float: left;
+    clear: none;
+    margin-right: 5px;
+  }
+  /* line 57, ../sass/screen.scss */
+  .app-bar div.header > h1 {
+    font-size: 22px !important;
+    line-height: 22px !important;
+    margin-bottom: 4px !important;
+  }
+  /* line 63, ../sass/screen.scss */
+  .app-bar div.header > a > i {
+    vertical-align: 2.5% !important;
+  }
+}
+/* line 68, ../sass/screen.scss */
+.app-bar div.header > h1 {
+  display: inline-block;
+  font-size: 30px;
+  line-height: 30px;
+  color: #eceff1;
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+/* line 78, ../sass/screen.scss */
+.app-bar ul.nav {
+  list-style: none;
+  display: inline-block;
+  margin-top: 0px;
+  margin-bottom: -6px;
+  padding-left: 0px;
+  height: 48px;
+  position: relative;
+}
+/* line 87, ../sass/screen.scss */
+.app-bar ul.nav > li {
+  display: block;
+  float: left;
+  position: relative;
+  height: 100%;
+  min-width: 48px;
+}
+/* line 94, ../sass/screen.scss */
+.app-bar ul.nav > li.nav-icon {
+  text-align: center;
+}
+/* line 98, ../sass/screen.scss */
+.app-bar ul.nav > li > a {
+  width: 100%;
+  height: 100%;
+  padding: 14px 12px 10px;
+}
+/* line 104, ../sass/screen.scss */
+.app-bar ul.nav > li > a:link, .app-bar ul.nav > li > a:focus, .app-bar ul.nav > li > a:visited {
+  color: #eceff1;
+  background-color: transparent !important;
+}
+/* line 109, ../sass/screen.scss */
+.app-bar ul.nav > li > a:hover, .app-bar ul.nav > li > a:active {
+  color: #fafafa;
+  background-color: #546e7a !important;
+  text-decoration: none;
+}
+/* line 118, ../sass/screen.scss */
+.app-bar .dropdown-toggle {
+  text-align: center;
+}
+/* line 122, ../sass/screen.scss */
+.app-bar .dropdown-menu {
+  top: 45px !important;
+  left: -111px !important;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+/* line 129, ../sass/screen.scss */
+.app-bar a.ipsum-logo {
+  display: inline-block;
+  color: #eceff1;
   width: 48px;
   text-align: center;
 }
-/* line 56, ../sass/screen.scss */
+
+/* line 137, ../sass/screen.scss */
+.main {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #fafafa;
+}
+@media (min-width: 1200px) {
+  /* line 137, ../sass/screen.scss */
+  .main {
+    padding: 0px 12.5%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 137, ../sass/screen.scss */
+  .main {
+    padding: 0px 5%;
+  }
+}
+@media (max-width: 991px) {
+  /* line 137, ../sass/screen.scss */
+  .main {
+    padding: 0px 0px;
+    float: none;
+    position: initial;
+  }
+}
+/* line 153, ../sass/screen.scss */
 .main .main-content {
   margin-left: 0px;
   margin-right: 0px;
-  padding-top: 70px;
-  padding-left: 10px;
 }
 /* line 15, ../../../../var/lib/gems/1.9.1/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
 .main .main-content:before, .main .main-content:after {
@@ -10558,8 +10657,20 @@ button.close {
 .main .main-content:after {
   clear: both;
 }
+@media (min-width: 1200px) {
+  /* line 153, ../sass/screen.scss */
+  .main .main-content {
+    padding-top: 140px;
+  }
+}
+@media (min-width: 0px) and (max-width: 1199px) {
+  /* line 153, ../sass/screen.scss */
+  .main .main-content {
+    padding-top: 60px;
+  }
+}
 
-/* line 63, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 .card {
   background-color: #fafafa;
   color: #263238;
@@ -10574,7 +10685,7 @@ button.close {
   margin-right: -1.5rem;
 }
 
-/* line 67, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 .card-portal-live {
   background-color: #d0f8ce;
   color: #0d5302;
@@ -10589,7 +10700,7 @@ button.close {
   margin-right: -1.5rem;
 }
 
-/* line 71, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 .dropdown-header {
   font-family: "Roboto Condensed MD", "Roboto Regular MD", Roboto, "Helvetica Neue", "Ubuntu", sans-serif;
   font-weight: 900;
@@ -10597,57 +10708,85 @@ button.close {
   text-transform: uppercase;
 }
 
-/* line 79, ../sass/screen.scss */
+/* line 180, ../sass/screen.scss */
+table > tr > td, .table > tbody > tr > td {
+  vertical-align: middle;
+  border-top: none;
+}
+/* line 185, ../sass/screen.scss */
+table > tr > th, .table > tbody > tr > th {
+  border-top: none;
+  border-bottom: 1px solid #546e7a;
+  font-family: "Roboto Condensed MD", "Roboto Regular MD", Roboto, "Helvetica Neue", "Ubuntu", sans-serif;
+  text-transform: uppercase;
+}
+
+/* line 193, ../sass/screen.scss */
+#portalTable > header > table {
+  margin-bottom: 0px;
+}
+
+/* line 197, ../sass/screen.scss */
+#portalTable > .affix {
+  background-color: #fafafa;
+  top: 110px;
+  padding-top: 10px;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* line 204, ../sass/screen.scss */
+#portalTable > table tr > td:nth-child(1) {
+  max-width: 64px;
+  width: 64px !important;
+}
+
+/* line 210, ../sass/screen.scss */
 .portal-live > td {
-  background-color: #d0f8ce;
   color: #0d5302;
 }
-/* line 83, ../sass/screen.scss */
+/* line 213, ../sass/screen.scss */
 .portal-live:hover > td {
-  background-color: #a5f2a1 !important;
+  background-color: #d0f8ce !important;
 }
-/* line 87, ../sass/screen.scss */
+/* line 217, ../sass/screen.scss */
 .portal-live.active > td {
   background-color: #0d5302 !important;
   color: #eceff1;
 }
 
-/* line 94, ../sass/screen.scss */
+/* line 224, ../sass/screen.scss */
 .portal-rejected > td {
-  background-color: #fde0dc;
   color: #b0120a;
 }
-/* line 98, ../sass/screen.scss */
+/* line 227, ../sass/screen.scss */
 .portal-rejected:hover > td {
-  background-color: #fab5ac !important;
+  background-color: #fde0dc !important;
 }
-/* line 102, ../sass/screen.scss */
+/* line 231, ../sass/screen.scss */
 .portal-rejected.active > td {
   background-color: #b0120a !important;
   color: #eceff1;
 }
 
-/* line 109, ../sass/screen.scss */
+/* line 238, ../sass/screen.scss */
 .portal-duplicate > td {
-  background-color: #fff8e1;
   color: #ff6f00;
 }
-/* line 113, ../sass/screen.scss */
+/* line 241, ../sass/screen.scss */
 .portal-duplicate:hover > td {
-  background-color: #ffecae !important;
+  background-color: #fff8e1 !important;
 }
 
-/* line 119, ../sass/screen.scss */
+/* line 247, ../sass/screen.scss */
 .portal-submitted > td {
-  background-color: #e0f2f1;
   color: #004d40;
 }
-/* line 123, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 .portal-submitted:hover > td {
-  background-color: #bce3e1 !important;
+  background-color: #e0f2f1 !important;
 }
 
-/* line 128, ../sass/screen.scss */
+/* line 255, ../sass/screen.scss */
 .portal-details-text {
   margin-left: 0px;
   margin-right: 0px;

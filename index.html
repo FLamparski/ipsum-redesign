@@ -19,59 +19,46 @@
   <body>
   <div class="wrapper">
     <div class="container-fluid">
-      <div class="sidebar">
-        <p>This will be the sidebar</p>
+      <div class="app-bar">
+        <div class="header">
+          <a class="ipsum-logo" href="#"><i class="fa fa-lg fa-navicon"></i></a>
+          <h1>Your Submissions</h1>
+        </div>
+        <ul class="nav">
+          <li class="nav-icon"><a href="#"><i class="fa fa-refresh"></i></a></li>
+          <li class="nav-icon"><a href="#"><i class="fa fa-search"></i></a></li>
+        </ul>
+        <ul class="nav pull-right">
+          <li class="hidden-xs"><a href="#">Dashboard</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="dropdown-header">Ipsum</li>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Report an issue</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Filip Wieland</li>
+              <li><a href="#">My settings</a><li>
+              <li><a href="#">Sign Out</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
       <div class="main">
-        <div class="navbar navbar-inverse">
-          <div class="navbar-header">
-            <a class="navbar-brand">Ipsum</a>
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-              id="ipsum-navbar-collapse"><i class="fa fa-overflow-v"></i>
-            </button>
-          </div>
-          <div class="navbar-collapse collapse" id="ipsum-navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-              <li><a href="#"><i class="fa fa-search"></i></a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="#">Dashboard</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li class="dropdown-header">Ipsum</li>
-                  <li><a href="#">Help</a></li>
-                  <li><a href="#">Report an issue</a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Filip Wieland</li>
-                  <li><a href="#">My settings</a><li>
-                  <li><a href="#">Sign Out</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
         <div class="main-content">
-          <div class="main-content-item col-lg-8 card">
-            <h1>Your Submissions</h1>
-            <div id="portalTable" class="card-no-margin">
-            </div>
-          </div>
-          <div class="main-content-item col-lg-3 row">
-            <div class="col-xs-12 card-portal-live">
-              <h2>Portal Title Here</h2>
-              <img class="img img-responsive" src="http://placehold.it/400x300" />
-              <div class="portal-details-text">
-                <div class="col-xs-6">
-                  <small>Status</small>
-                  <p class="lead"><b>Live</b></p>
-                </div>
-                <div class="col-xs-6">
-                  <small>Time to review</small>
-                  <p class="lead"><b>93</b> days</p>
-                </div>
-              </div>
+          <div class="main-content-item col-xs-12">
+            <div id="portalTable">
+              <header>
+                <table class="table table-condensed">
+                  <tr>
+                    <th style="width: 64px"></th>
+                    <th>Title <a href="#" class="btn btn-xs pull-right"><i class="fa fa-sort"></i></a></th>
+                    <th>Submitted <a href="#" class="btn btn-info btn-xs pull-right"><i class="fa fa-sort-desc"></i></a></th>
+                    <th class="hidden-xs">State <a href="#" class="btn btn-xs pull-right"><i class="fa fa-sort"></i></a></th>
+                    <th class="hidden-xs">TTR <a href="#" class="btn btn-xs pull-right"><i class="fa fa-sort"></i></a></th>
+                  </tr>
+                </table>
+              </header>
             </div>
           </div>
         </div>
@@ -82,7 +69,8 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <script src="./js/mockables.js"></script>
+    <script src="./js/layout.js"></script>
   </body>
 </html>
