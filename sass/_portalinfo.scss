@@ -1,0 +1,57 @@
+
+
+.portal-info-drawer {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 40; // above regular content but behind the app bar and navdrawer
+  height: 100%;
+  padding-left: 8px;
+  padding-right: 10px;
+  @media (min-width: 0px) and (max-width: $screen-xs-max) {
+    width: 100%;
+    padding-top: 40px;
+  }
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    width: 66.6666667%;
+    padding-top: 40px;
+  }
+  @media (min-width: $screen-md-min){
+    width: 480px;
+    padding-top: 40px;
+  }
+  @media (min-width: $screen-lg-min) {
+    padding-top: 100px !important;
+  }
+  background-color: white;
+  box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.3);
+  overflow: auto; // Allow scrollbars to be generated
+
+ .btn-close {
+    color: $gray_dark;
+  }
+
+  .portal-title {
+    position: absolute;
+    @include gradient-vertical($gray_darker, rgba(0, 0, 0, 0.0));
+    color: white;
+    width: 100%;
+    margin: 0px -10px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+
+    .fa {
+      color: $gray_lighter;
+    }
+  }
+
+  .portal-photo {
+    margin: 5px -10px 5px;
+    background-color: $gray_darker;
+  }
+
+  table td.attrname {
+    font-weight: bold;
+    text-align: right;
+  }
+}

@@ -256,3 +256,6 @@ table, .table > tbody {
   @include make-row();
   margin-top: 10px;
 }
+
+@import "_navdrawer.scss";
+@import "_portalinfo.scss";

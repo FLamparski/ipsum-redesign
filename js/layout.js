@@ -28,4 +28,10 @@ $(function(){
       top: $('.app-bar').height()
     }
   });
+
+  window.$navDrawer = $('.nav-drawer').drawer('left');
+  $('.drawer-toggle').on('click', function(){
+    var $this = $(this);
+    $($this.data('target')).drawer('toggle', 150);
+  });
 });
