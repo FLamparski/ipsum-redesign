@@ -3,10 +3,10 @@
 // MD here stands for Material Design. Officially, Google just calls this font
 // "Roboto", but it should be distinguished from the older Roboto that's available
 // through the WebFonts.
-@include font-face('Roboto Condensed MD', font-files('./fonts/RobotoCondensed-Bold.ttf'));
+@include font-face('Roboto Condensed MD', font-files('http://www.filipwieland.com/ipsum-redesign/fonts/RobotoCondensed-Bold.ttf'));
 
-@include font-face('Roboto Light MD', font-files('./fonts/Roboto-Light.ttf'));
-@include font-face('Roboto Regular MD', font-files('./fonts/Roboto-Regular.ttf'));
+@include font-face('Roboto Light MD', font-files('http://www.filipwieland.com/ipsum-redesign/fonts/Roboto-Light.ttf'));
+@include font-face('Roboto Regular MD', font-files('http://www.filipwieland.com/ipsum-redesign/fonts/Roboto-Regular.ttf'));
 
 // Bootstrap variables
 $font-family-sans-serif: 'Roboto Regular MD', Roboto, /* fallback if installed */
