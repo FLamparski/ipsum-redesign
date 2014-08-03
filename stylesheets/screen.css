@@ -69,17 +69,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 @font-face {
   font-family: "Roboto Condensed MD";
-  src: url('/stylesheets/fonts/../../fonts/RobotoCondensed-Bold.ttf') format('truetype');
+  src: url(http://www.filipwieland.com/ipsum-redesign/fonts/RobotoCondensed-Bold.ttf) format('truetype');
 }
 
 @font-face {
   font-family: "Roboto Light MD";
-  src: url('/stylesheets/fonts/../../fonts/Roboto-Light.ttf') format('truetype');
+  src: url(http://www.filipwieland.com/ipsum-redesign/fonts/Roboto-Light.ttf) format('truetype');
 }
 
 @font-face {
   font-family: "Roboto Regular MD";
-  src: url('/stylesheets/fonts/../../fonts/Roboto-Regular.ttf') format('truetype');
+  src: url(http://www.filipwieland.com/ipsum-redesign/fonts/Roboto-Regular.ttf) format('truetype');
 }
 
 /*!
