@@ -1,4 +1,5 @@
 (function($){
+  $.__drawers_open = 0;
   // Declare the class
   function Drawer($el, edge){
     console.log('Drawer(%s)', edge);
@@ -14,6 +15,17 @@
     var cssDef = {};
     cssDef[edge] = -(this._edgeType === 'h' ? $el.outerHeight() : $el.outerWidth());
     $el.css(cssDef);
+  }
+  // Private members
+  Drawer.prototype._rmBodyClass = function(n_drawers){
+    if(n_drawers === 0){
+      $('body').removeClass('drawer-open');
+    }
+  };
+  Drawer.prototype._addBodyClass = function(n_drawers){
+    if(n_drawers > 0){
+      $('body').addClass('drawer-open');
+    }
   }
   // Methods
   /**
@@ -32,6 +44,7 @@
         animDef = {};
     animDef[this.edge] = -(this._edgeType === 'h' ? $self.outerHeight() : $self.outerWidth());
     this.state = 'hidden';
+    this._rmBodyClass(--$.__drawers_open);
     return $self.animate.apply($self, [].concat(animDef, Array.prototype.slice.call(arguments)));
   };
   /**
@@ -46,6 +59,7 @@
         animDef = {};
     animDef[this.edge] = 0;
     this.state = 'shown';
+    this._addBodyClass(++$.__drawers_open);
     return $self.animate.apply($self, [].concat(animDef, Array.prototype.slice.call(arguments)));
   };
   /**

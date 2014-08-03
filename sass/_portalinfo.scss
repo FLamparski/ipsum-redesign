@@ -33,7 +33,7 @@
 
   .portal-title {
     position: absolute;
-    @include gradient-vertical($gray_darker, rgba(0, 0, 0, 0.0));
+    @include gradient-vertical($gray-darker, rgba(0, 0, 0, 0.0));
     color: white;
     width: 100%;
     margin: 0px -10px;
@@ -41,17 +41,105 @@
     padding-bottom: 10px;
 
     .fa {
-      color: $gray_lighter;
+      color: $gray-lighter;
     }
   }
 
   .portal-photo {
     margin: 5px -10px 5px;
-    background-color: $gray_darker;
+    background-color: $gray-darker;
   }
 
   table td.attrname {
     font-weight: bold;
     text-align: right;
+  }
+
+  .timeline {
+    &:before{
+      content: '';
+      height: 100%;
+      width: 2px;
+      background-color: $gray-dark;
+      position: absolute;
+      top: 0;
+      left: 14px;
+    }
+
+    position: relative;
+
+    > li {
+      margin-left: 32px;
+      margin-bottom: 20px;
+      display: block;
+      padding: 10px 15px;
+      border: 1px solid $gray-light;
+      border-radius: 3px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      position: relative;
+
+      &:before {
+        content: '';
+        border-radius: 100%;
+        width: 28px;
+        height: 28px;
+        background-color: white;
+        border: 1px solid $gray-light;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 8px;
+        left: -32px;
+        padding-top: 4px;
+        padding-left: 4px;
+      }
+
+      &:first-child {
+        margin-top: 10px;
+      }
+      &:last-child {
+        margin-bottom: 5px !important;
+      }
+
+      &.success {
+        &:before {
+          content: '\f00c' !important;
+          font-family: FontAwesome;
+          background-color: $state-success-bg;
+          border-color: $state-success-border;
+        }
+        background-color: $state-success-bg;
+        border-color: $state-success-border;
+      }
+      &.info {
+        &:before {
+          content: '\f1d8';
+          font-family: FontAwesome;
+          background-color: $state-info-bg;
+          border-color: $state-info-border;
+        }
+        background-color: $state-info-bg;
+        border-color: $state-info-border;
+      }
+      &.danger {
+        &:before {
+          content: '\f00d';
+          font-family: FontAwesome;
+          background-color: $state-danger-bg;
+          border-color: $state-danger-border;
+          padding-top: 3px;
+          padding-left: 6px;
+        }
+        background-color: $state-danger-bg;
+        border-color: $state-danger-border;
+      }
+      
+      &.resolution {
+        box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3);
+
+        &:before {
+          box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
   }
 }

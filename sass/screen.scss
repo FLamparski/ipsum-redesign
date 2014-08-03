@@ -20,6 +20,13 @@ $dropdown-header-color: $gray-darker;
 
 @import "bootstrap";
 
+body.drawer-open {
+  /* Prevent scrolling on the body element
+   * if there is currently a drawer open.
+   */
+  overflow: hidden;
+}
+
 .wrapper, .container-fluid {
   position: absolute;
   width: 100%;
@@ -241,6 +248,10 @@ table, .table > tbody {
   &:hover > td {
     background-color: $portal_duplicate_bg !important;
   }
+  &.active > td {
+    background-color: $portal_duplicate_text !important;
+    color: $portal_duplicate_bg !important;
+  }
 }
 
 .portal-submitted {
@@ -249,6 +260,10 @@ table, .table > tbody {
   }
   &:hover > td {
     background-color: $portal_submitted_bg !important;
+  }
+  &.active > td {
+    background-color: $portal_submitted_text !important;
+    color: $portal_submitted_bg !important;
   }
 }
 
