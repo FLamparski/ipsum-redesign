@@ -39,6 +39,7 @@
     margin: 0px -10px;
     padding-top: 15px;
     padding-bottom: 10px;
+    @include label();
 
     .fa {
       color: $gray-lighter;
@@ -64,6 +65,7 @@
       position: absolute;
       top: 0;
       left: 14px;
+      user-select: none;
     }
 
     position: relative;
@@ -91,6 +93,7 @@
         left: -32px;
         padding-top: 4px;
         padding-left: 4px;
+        user-select: none;
       }
 
       &:first-child {
@@ -106,6 +109,7 @@
           font-family: FontAwesome;
           background-color: $state-success-bg;
           border-color: $state-success-border;
+          user-select: none;
         }
         background-color: $state-success-bg;
         border-color: $state-success-border;
@@ -116,6 +120,7 @@
           font-family: FontAwesome;
           background-color: $state-info-bg;
           border-color: $state-info-border;
+          user-select: none;
         }
         background-color: $state-info-bg;
         border-color: $state-info-border;
@@ -128,6 +133,7 @@
           border-color: $state-danger-border;
           padding-top: 3px;
           padding-left: 6px;
+          user-select: none;
         }
         background-color: $state-danger-bg;
         border-color: $state-danger-border;

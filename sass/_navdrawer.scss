@@ -8,6 +8,7 @@
   height: 100%;
   padding-left: 10px;
   padding-right: 8px;
+  @include label();
   @media (min-width: 0px) and (max-width: $screen-xs-max) {
     min-width: 200px;
     width: 40%;
