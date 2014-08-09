@@ -1,7 +1,7 @@
 /* global $, console */
-/* global $navDrawer:true, $portalDrawer:true */
 
 $(function(){
+  "use strict";
   function _resizePortalTableHeader(){
     $('#portalTable > header').width($('#portalTable').width())
       .css('top', ($('.app-bar').height() - 10).toString().concat('px'));
@@ -32,12 +32,12 @@ $(function(){
     }
   });
 
-  $navDrawer = $('.nav-drawer').drawer('left');
+  window.$navDrawer = $('.nav-drawer').drawer('left');
   $('.drawer-toggle').on('click', function(){
     var $this = $(this);
     $($this.data('target')).drawer('toggle', 150);
   });
-  $portalDrawer = $('.portal-info-drawer').drawer('right');
+  window.$portalDrawer = $('.portal-info-drawer').drawer('right');
   $('.portal-info-drawer button').on('click', function(){
     var $this = $(this);
     $($this.data('dismiss')).drawer('hide', 150);
@@ -48,6 +48,8 @@ $(function(){
     var $this = $(this);
     console.log("portal #%d click", $this.data('index'));
     $('tr.portal').removeClass('active').filter('[data-index=' + $this.data('index') + ']').addClass('active');
-    $portalDrawer.drawer('show', 150);
+    if (!(window.$portalDrawer.drawer('open?'))){
+      window.$portalDrawer.drawer('show', 150);
+    }
   });
 });

@@ -82,6 +82,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   src: url('/stylesheets/fonts/../../fonts/Roboto-Regular.ttf') format('truetype');
 }
 
+/* line 20, ../sass/_typography.scss */
+h5, h6 {
+  font-family: "Roboto Condensed MD", "Roboto Condensed", "Roboto Light MD", "Roboto Regular MD", Roboto, "Helvetica Neue", "Ubuntu", sans-serif !important;
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+}
+
 /*!
  *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -4079,7 +4086,7 @@ hr {
 /* line 10, ../../../../var/lib/gems/1.9.1/gems/bootstrap-sass-3.2.0.1/assets/stylesheets/bootstrap/_type.scss */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Roboto Light MD";
+  font-family: "Roboto Light MD", "Roboto Regular MD", Roboto, "Helvetica Neue", "Ubuntu", sans-serif;
   font-weight: 100;
   line-height: 1.1;
   color: inherit;
@@ -11029,42 +11036,123 @@ table > tr > th, .table > tbody > tr > th {
   }
 }
 /* line 30, ../sass/_portalinfo.scss */
-.portal-info-drawer .btn-close {
+.portal-info-drawer .btn-heading {
+  border: none;
+  background-color: transparent;
   color: #616161;
 }
-/* line 34, ../sass/_portalinfo.scss */
+/* line 37, ../sass/_portalinfo.scss */
+.portal-info-drawer .btn-heading.btn-portaltools > span > i.fa,
+.portal-info-drawer .btn-heading.btn-portaltools > small {
+  color: #546e7a;
+}
+/* line 46, ../sass/_portalinfo.scss */
+.portal-info-drawer .btn-ingress {
+  border-radius: 0px !important;
+  color: #04666b;
+  background-color: #d7fbfd;
+  border-color: rgba(0, 0, 0, 0);
+}
+/* line 15, ../../../../var/lib/gems/1.9.1/gems/bootstrap-sass-3.2.0.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.portal-info-drawer .btn-ingress:hover, .portal-info-drawer .btn-ingress:focus, .portal-info-drawer .btn-ingress:active, .portal-info-drawer .btn-ingress.active, .open > .portal-info-drawer .btn-ingress.dropdown-toggle {
+  color: #04666b;
+  background-color: #a7f6fa;
+  border-color: rgba(0, 0, 0, 0);
+}
+/* line 22, ../../../../var/lib/gems/1.9.1/gems/bootstrap-sass-3.2.0.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.portal-info-drawer .btn-ingress:active, .portal-info-drawer .btn-ingress.active, .open > .portal-info-drawer .btn-ingress.dropdown-toggle {
+  background-image: none;
+}
+/* line 32, ../../../../var/lib/gems/1.9.1/gems/bootstrap-sass-3.2.0.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.portal-info-drawer .btn-ingress.disabled, .portal-info-drawer .btn-ingress.disabled:hover, .portal-info-drawer .btn-ingress.disabled:focus, .portal-info-drawer .btn-ingress.disabled:active, .portal-info-drawer .btn-ingress.disabled.active, .portal-info-drawer .btn-ingress[disabled], .portal-info-drawer .btn-ingress[disabled]:hover, .portal-info-drawer .btn-ingress[disabled]:focus, .portal-info-drawer .btn-ingress[disabled]:active, .portal-info-drawer .btn-ingress[disabled].active, fieldset[disabled] .portal-info-drawer .btn-ingress, fieldset[disabled] .portal-info-drawer .btn-ingress:hover, fieldset[disabled] .portal-info-drawer .btn-ingress:focus, fieldset[disabled] .portal-info-drawer .btn-ingress:active, fieldset[disabled] .portal-info-drawer .btn-ingress.active {
+  background-color: #d7fbfd;
+  border-color: rgba(0, 0, 0, 0);
+}
+/* line 38, ../../../../var/lib/gems/1.9.1/gems/bootstrap-sass-3.2.0.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.portal-info-drawer .btn-ingress .badge {
+  color: #d7fbfd;
+  background-color: #04666b;
+}
+/* line 51, ../sass/_portalinfo.scss */
+.portal-info-drawer .btn-gmaps {
+  border-radius: 0px !important;
+  color: #3f5b1f;
+  background-color: #d8eac2;
+  border-color: rgba(0, 0, 0, 0);
+}
+/* line 15, ../../../../var/lib/gems/1.9.1/gems/bootstrap-sass-3.2.0.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.portal-info-drawer .btn-gmaps:hover, .portal-info-drawer .btn-gmaps:focus, .portal-info-drawer .btn-gmaps:active, .portal-info-drawer .btn-gmaps.active, .open > .portal-info-drawer .btn-gmaps.dropdown-toggle {
+  color: #3f5b1f;
+  background-color: #bfde9b;
+  border-color: rgba(0, 0, 0, 0);
+}
+/* line 22, ../../../../var/lib/gems/1.9.1/gems/bootstrap-sass-3.2.0.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.portal-info-drawer .btn-gmaps:active, .portal-info-drawer .btn-gmaps.active, .open > .portal-info-drawer .btn-gmaps.dropdown-toggle {
+  background-image: none;
+}
+/* line 32, ../../../../var/lib/gems/1.9.1/gems/bootstrap-sass-3.2.0.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.portal-info-drawer .btn-gmaps.disabled, .portal-info-drawer .btn-gmaps.disabled:hover, .portal-info-drawer .btn-gmaps.disabled:focus, .portal-info-drawer .btn-gmaps.disabled:active, .portal-info-drawer .btn-gmaps.disabled.active, .portal-info-drawer .btn-gmaps[disabled], .portal-info-drawer .btn-gmaps[disabled]:hover, .portal-info-drawer .btn-gmaps[disabled]:focus, .portal-info-drawer .btn-gmaps[disabled]:active, .portal-info-drawer .btn-gmaps[disabled].active, fieldset[disabled] .portal-info-drawer .btn-gmaps, fieldset[disabled] .portal-info-drawer .btn-gmaps:hover, fieldset[disabled] .portal-info-drawer .btn-gmaps:focus, fieldset[disabled] .portal-info-drawer .btn-gmaps:active, fieldset[disabled] .portal-info-drawer .btn-gmaps.active {
+  background-color: #d8eac2;
+  border-color: rgba(0, 0, 0, 0);
+}
+/* line 38, ../../../../var/lib/gems/1.9.1/gems/bootstrap-sass-3.2.0.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.portal-info-drawer .btn-gmaps .badge {
+  color: #d8eac2;
+  background-color: #3f5b1f;
+}
+/* line 56, ../sass/_portalinfo.scss */
+.portal-info-drawer .btn-citymapper {
+  border-radius: 0px !important;
+  color: #11320e;
+  background-color: #97e191;
+  border-color: rgba(0, 0, 0, 0);
+}
+/* line 15, ../../../../var/lib/gems/1.9.1/gems/bootstrap-sass-3.2.0.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.portal-info-drawer .btn-citymapper:hover, .portal-info-drawer .btn-citymapper:focus, .portal-info-drawer .btn-citymapper:active, .portal-info-drawer .btn-citymapper.active, .open > .portal-info-drawer .btn-citymapper.dropdown-toggle {
+  color: #11320e;
+  background-color: #71d768;
+  border-color: rgba(0, 0, 0, 0);
+}
+/* line 22, ../../../../var/lib/gems/1.9.1/gems/bootstrap-sass-3.2.0.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.portal-info-drawer .btn-citymapper:active, .portal-info-drawer .btn-citymapper.active, .open > .portal-info-drawer .btn-citymapper.dropdown-toggle {
+  background-image: none;
+}
+/* line 32, ../../../../var/lib/gems/1.9.1/gems/bootstrap-sass-3.2.0.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.portal-info-drawer .btn-citymapper.disabled, .portal-info-drawer .btn-citymapper.disabled:hover, .portal-info-drawer .btn-citymapper.disabled:focus, .portal-info-drawer .btn-citymapper.disabled:active, .portal-info-drawer .btn-citymapper.disabled.active, .portal-info-drawer .btn-citymapper[disabled], .portal-info-drawer .btn-citymapper[disabled]:hover, .portal-info-drawer .btn-citymapper[disabled]:focus, .portal-info-drawer .btn-citymapper[disabled]:active, .portal-info-drawer .btn-citymapper[disabled].active, fieldset[disabled] .portal-info-drawer .btn-citymapper, fieldset[disabled] .portal-info-drawer .btn-citymapper:hover, fieldset[disabled] .portal-info-drawer .btn-citymapper:focus, fieldset[disabled] .portal-info-drawer .btn-citymapper:active, fieldset[disabled] .portal-info-drawer .btn-citymapper.active {
+  background-color: #97e191;
+  border-color: rgba(0, 0, 0, 0);
+}
+/* line 38, ../../../../var/lib/gems/1.9.1/gems/bootstrap-sass-3.2.0.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.portal-info-drawer .btn-citymapper .badge {
+  color: #97e191;
+  background-color: #11320e;
+}
+/* line 61, ../sass/_portalinfo.scss */
 .portal-info-drawer .portal-title {
-  position: absolute;
-  background-image: -webkit-linear-gradient(top, #212121 0%, rgba(0, 0, 0, 0) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#212121), to(rgba(0, 0, 0, 0)));
-  background-image: linear-gradient(to bottom, #212121 0%, rgba(0, 0, 0, 0) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF212121', endColorstr='#00000000', GradientType=0);
-  color: white;
   width: 100%;
   margin: 0px -10px;
   padding-top: 15px;
   padding-bottom: 10px;
 }
-/* line 43, ../sass/_portalinfo.scss */
+/* line 67, ../sass/_portalinfo.scss */
 .portal-info-drawer .portal-title .fa {
-  color: #fafafa;
+  color: #212121;
 }
-/* line 48, ../sass/_portalinfo.scss */
+/* line 72, ../sass/_portalinfo.scss */
 .portal-info-drawer .portal-photo {
   margin: 5px -10px 5px;
   background-color: #212121;
 }
-/* line 53, ../sass/_portalinfo.scss */
+/* line 77, ../sass/_portalinfo.scss */
 .portal-info-drawer table td.attrname {
   font-weight: bold;
   text-align: right;
 }
-/* line 58, ../sass/_portalinfo.scss */
+/* line 82, ../sass/_portalinfo.scss */
 .portal-info-drawer .timeline {
   position: relative;
 }
-/* line 59, ../sass/_portalinfo.scss */
+/* line 83, ../sass/_portalinfo.scss */
 .portal-info-drawer .timeline:before {
   content: '';
   height: 100%;
@@ -11074,7 +11162,7 @@ table > tr > th, .table > tbody > tr > th {
   top: 0;
   left: 14px;
 }
-/* line 71, ../sass/_portalinfo.scss */
+/* line 95, ../sass/_portalinfo.scss */
 .portal-info-drawer .timeline > li {
   margin-left: 32px;
   margin-bottom: 20px;
@@ -11086,7 +11174,7 @@ table > tr > th, .table > tbody > tr > th {
           box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   position: relative;
 }
-/* line 81, ../sass/_portalinfo.scss */
+/* line 105, ../sass/_portalinfo.scss */
 .portal-info-drawer .timeline > li:before {
   content: '';
   border-radius: 100%;
@@ -11102,58 +11190,64 @@ table > tr > th, .table > tbody > tr > th {
   padding-top: 4px;
   padding-left: 4px;
 }
-/* line 96, ../sass/_portalinfo.scss */
+/* line 120, ../sass/_portalinfo.scss */
 .portal-info-drawer .timeline > li:first-child {
   margin-top: 10px;
 }
-/* line 99, ../sass/_portalinfo.scss */
+/* line 123, ../sass/_portalinfo.scss */
 .portal-info-drawer .timeline > li:last-child {
   margin-bottom: 5px !important;
 }
-/* line 103, ../sass/_portalinfo.scss */
+/* line 127, ../sass/_portalinfo.scss */
 .portal-info-drawer .timeline > li.success {
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
-/* line 104, ../sass/_portalinfo.scss */
+/* line 128, ../sass/_portalinfo.scss */
 .portal-info-drawer .timeline > li.success:before {
   content: '\f00c' !important;
   font-family: FontAwesome;
   background-color: #dff0d8;
   border-color: #d6e9c6;
+  color: #557f31;
+  text-shadow: 1px 1px 0px white;
 }
-/* line 113, ../sass/_portalinfo.scss */
+/* line 139, ../sass/_portalinfo.scss */
 .portal-info-drawer .timeline > li.info {
   background-color: #d9edf7;
   border-color: #bce8f1;
 }
-/* line 114, ../sass/_portalinfo.scss */
+/* line 140, ../sass/_portalinfo.scss */
 .portal-info-drawer .timeline > li.info:before {
   content: '\f1d8';
   font-family: FontAwesome;
   background-color: #d9edf7;
   border-color: #bce8f1;
+  color: #1e7c8f;
+  text-shadow: 1px 1px 0px white;
 }
-/* line 123, ../sass/_portalinfo.scss */
+/* line 151, ../sass/_portalinfo.scss */
 .portal-info-drawer .timeline > li.danger {
   background-color: #f2dede;
   border-color: #ebccd1;
 }
-/* line 124, ../sass/_portalinfo.scss */
+/* line 152, ../sass/_portalinfo.scss */
 .portal-info-drawer .timeline > li.danger:before {
   content: '\f00d';
   font-family: FontAwesome;
   background-color: #f2dede;
   border-color: #ebccd1;
+  color: #843441;
+  text-shadow: 1px 1px 0px white;
   padding-top: 3px;
   padding-left: 6px;
 }
-/* line 136, ../sass/_portalinfo.scss */
+/* line 166, ../sass/_portalinfo.scss */
 .portal-info-drawer .timeline > li.resolution {
   -webkit-box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3);
 }
-/* line 139, ../sass/_portalinfo.scss */
+/* line 169, ../sass/_portalinfo.scss */
 .portal-info-drawer .timeline > li.resolution:before {
   -webkit-box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3);

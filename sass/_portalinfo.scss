@@ -27,21 +27,45 @@
   box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.3);
   overflow: auto; // Allow scrollbars to be generated
 
- .btn-close {
+ .btn-heading {
+    border: none;
+    background-color: transparent;
     color: $gray_dark;
+
+    &.btn-portaltools {
+      > span > i.fa,
+      > small {
+        color: $blue_grey_600;
+      }
+    }
+  }
+
+  @mixin square-borders (){
+    border-radius: 0px !important;
+  }
+  .btn-ingress {
+    @include square-borders();
+    @include button-variant(darken(#11ecf7, 30%), lighten(desaturate(#11ecf7, 5%), 40%), rgba(0,0,0,0)); 
+  }
+
+  .btn-gmaps {
+    @include square-borders();
+    @include button-variant(darken(#8EC44F, 30%), lighten(#8EC44F, 30%), rgba(0,0,0,0));
+  }
+
+  .btn-citymapper {
+    @include square-borders();
+    @include button-variant(darken(#38AB2E, 30%), lighten(#38AB2E, 30%), rgba(0,0,0,0));
   }
 
   .portal-title {
-    position: absolute;
-    @include gradient-vertical($gray-darker, rgba(0, 0, 0, 0.0));
-    color: white;
     width: 100%;
     margin: 0px -10px;
     padding-top: 15px;
     padding-bottom: 10px;
 
     .fa {
-      color: $gray-lighter;
+      color: $gray-darker;
     }
   }
 
@@ -106,6 +130,8 @@
           font-family: FontAwesome;
           background-color: $state-success-bg;
           border-color: $state-success-border;
+          color: darken($state-success-border, 50%);
+          text-shadow: 1px 1px 0px white;
         }
         background-color: $state-success-bg;
         border-color: $state-success-border;
@@ -116,6 +142,8 @@
           font-family: FontAwesome;
           background-color: $state-info-bg;
           border-color: $state-info-border;
+          color: darken($state-info-border, 50%);
+          text-shadow: 1px 1px 0px white;
         }
         background-color: $state-info-bg;
         border-color: $state-info-border;
@@ -126,6 +154,8 @@
           font-family: FontAwesome;
           background-color: $state-danger-bg;
           border-color: $state-danger-border;
+          color: darken($state-danger-border, 50%);
+          text-shadow: 1px 1px 0px white;
           padding-top: 3px;
           padding-left: 6px;
         }

@@ -70,14 +70,19 @@
             <div class="row">
               <div class="col-xs-12">
                 <h2 class="portal-title">
-                  <button type="button" class="btn btn-link btn-close" data-dismiss=".portal-info-drawer">
+                  <button type="button" class="btn btn-heading" data-dismiss=".portal-info-drawer">
                     <span aria-hidden="true"><i class="fa fa-chevron-left"></i></span>
                   </button>
                   Portal Title Here
+                  <span class="pull-right">
+                    <button type="button" title="Photos" class="btn btn-heading btn-portaltools" id="portalGalleryBtn">
+                      <span aria-hidden="true"><i class="fa fa-lg fa-image"></i></span>
+                    </button>
+                    <button type="button" title="Share" class="btn btn-heading btn-portaltools" id="portalShareBtn">
+                      <span aria-hidden="true"><i class="fa fa-lg fa-share-alt"></i></span>
+                    </button>
+                  </span>
                 </h2>
-                <div class="portal-photo">
-                  <img src="http://placehold.it/400x300" class="img img-responsive center-block" />
-                </div>
                 <h5>Description</h5>
                 <p>The portal description would usually go here.</p>
                 <h5>Summary</h5>
@@ -96,16 +101,16 @@
                   <li class="info"><b>Submitted</b> by <b>you</b> on the 23rd of July 2014</li>
                 </ul>
                 <h5>Tools</h5>
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default">
+                <div class="row">
+                  <button type="button" class="col-xs-4 btn btn-ingress">
                     <img src="./img/location_map.png" class="img img-responsive center-block" />
                     Ingress Intel
                   </button>
-                  <button type="button" class="btn btn-default">
+                  <button type="button" class="col-xs-4 btn btn-gmaps">
                     <img src="./img/location_map.png" class="img img-responsive center-block" />
                     Google Maps
                   </button>
-                  <button type="button" class="btn btn-default">
+                  <button type="button" class="col-xs-4 btn btn-citymapper">
                     <img src="./img/location_directions.png" class="img img-responsive center-block" />
                     Citymapper
                   </button>
