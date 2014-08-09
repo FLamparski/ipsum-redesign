@@ -60,10 +60,12 @@ body.drawer-open {
     @media (max-width: $screen-xs-max) {
       float: left;
       clear: none;
-      margin-right: 5px;
       > h1 {
-        font-size: 18px !important;
-        line-height: 18px !important;
+        font-size: 16px !important;
+        line-height: 16px !important;
+      }
+      > .drawer-toggle {
+        margin-right: -10px;
       }
     }
     @media (min-width: $screen-sm-min) and (max-width: $screen-md-max){
@@ -106,6 +108,9 @@ body.drawer-open {
       position: relative;
       height: 100%;
       min-width: 48px;
+      @media (max-width: $screen-xs-max){
+        min-width: 40px;
+      }
 
       &.nav-icon {
         text-align: center;
